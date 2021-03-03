@@ -41,7 +41,6 @@ function draw() {
   //Add code for displaying text here!
   image(boy, 200, 340, 200, 300);
 
-
   treeObj.display();
   mango1.display();
   mango2.display();
@@ -84,6 +83,7 @@ function detectCollision(locStone, locMango) {
     Matter.Body.setStatic(locMango.body, false);
   }
 }
+
 function keyPressed() {
   if (keyCode === "32") {
     Matter.Body.setPosition(stone1.body, { x: 200, y: 340 });
