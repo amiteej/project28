@@ -55,6 +55,17 @@ function draw() {
   stone1.display();
   sling1.display();
 
+  
+
+detectCollision(stone1, mango1);
+detectCollision(stone1, mango2);
+detectCollision(stone1, mango3);
+detectCollision(stone1, mango4);
+detectCollision(stone1, mango5);
+detectCollision(stone1, mango6);
+detectCollision(stone1, mango7);
+detectCollision(stone1, mango8);
+
 
 }
 
@@ -86,11 +97,3 @@ function keyPressed() {
 }
 
 
-detectCollision(stone1, mango1);
-detectCollision(stone1, mango2);
-detectCollision(stone1, mango3);
-detectCollision(stone1, mango4);
-detectCollision(stone1, mango5);
-detectCollision(stone1, mango6);
-detectCollision(stone1, mango7);
-detectCollision(stone1, mango8);
