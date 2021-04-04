@@ -55,42 +55,42 @@ function draw() {
   stone1.display();
   sling1.display();
 
-  function mouseDragged() {
-    Matter.Body.setPosition(stone1.body, { x: mouseX, y: mouseY });
-  }
-  
-  function mouseReleased() {
-    sling1.fly();
-  }
-  
-  function detectCollision(locStone, locMango) {
-    stonePos = locStone.body.position;
-    mangoPos = locMango.body.position;
-  
-    var distance = dist(stonePos.x, stonePos.y, mangoPos.x, mangoPos.y);
-  
-    if (distance <= locMango.r + locStone.r) {
-      Matter.Body.setStatic(locMango.body, false);
-    }
-  }
-  
-  function keyPressed() {
-    if (keyCode === 32) {
-      Matter.Body.setPosition(stone1.body, { x: 230, y: 390 });
-      sling.attach(stone1.body);
-    }
-  }
-  
-
-  detectCollision(stone1, mango1);
-  detectCollision(stone1, mango2);
-  detectCollision(stone1, mango3);
-  detectCollision(stone1, mango4);
-  detectCollision(stone1, mango5);
-  detectCollision(stone1, mango6);
-  detectCollision(stone1, mango7);
-  detectCollision(stone1, mango8);
 
 }
 
 
+function mouseDragged() {
+  Matter.Body.setPosition(stone1.body, { x: mouseX, y: mouseY });
+}
+
+function mouseReleased() {
+  sling1.fly();
+}
+
+function detectCollision(locStone, locMango) {
+  stonePos = locStone.body.position;
+  mangoPos = locMango.body.position;
+
+  var distance = dist(stonePos.x, stonePos.y, mangoPos.x, mangoPos.y);
+
+  if (distance <= locMango.r + locStone.r) {
+    Matter.Body.setStatic(locMango.body, false);
+  }
+}
+
+function keyPressed() {
+  if (keyCode === 32) {
+    Matter.Body.setPosition(stone1.body, { x: 230, y: 390 });
+    sling.attach(stone1.body);
+  }
+}
+
+
+detectCollision(stone1, mango1);
+detectCollision(stone1, mango2);
+detectCollision(stone1, mango3);
+detectCollision(stone1, mango4);
+detectCollision(stone1, mango5);
+detectCollision(stone1, mango6);
+detectCollision(stone1, mango7);
+detectCollision(stone1, mango8);
