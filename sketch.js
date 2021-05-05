@@ -92,7 +92,7 @@ function detectCollision(locStone, locMango) {
 function keyPressed() {
   if (keyCode === 32) {
     Matter.Body.setPosition(stone1.body, { x: 230, y: 390 });
-    sling.attach(stone1.body);
+    sling1.attach(stone1.body);
   }
 }
 
